@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0EF9A867-1DE7-413A-B6B8-B0702A08B856}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpleSoccer.Net</RootNamespace>
+    <AssemblyName>SimpleSoccer.Net</AssemblyName>
+    <ManifestCertificateThumbprint>84DF1949C8886634722466004F8F2B06C6DEC03D</ManifestCertificateThumbprint>
+    <ManifestKeyFile>SimpleSoccer.Net.VS8_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>http://localhost:5000/apps/SimpleSoccer/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AutoList.cs" />
+    <Compile Include="Common\GDI.cs" />
+    <Compile Include="Common\Geometry.cs" />
+    <Compile Include="Common\Matrix2D.cs" />
+    <Compile Include="Common\ParameterFileBase.cs" />
+    <Compile Include="Common\ParameterManager.cs" />
+    <Compile Include="Common\Point.cs" />
+    <Compile Include="Common\PrecisionTimer.cs" />
+    <Compile Include="Common\PriorityQueue.cs" />
+    <Compile Include="Common\Regulator.cs" />
+    <Compile Include="Common\Transformations.cs" />
+    <Compile Include="Common\Utils.cs" />
+    <Compile Include="Common\Vector2D.cs" />
+    <Compile Include="Common\Wall2D.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Entity Related\BaseGameEntity.cs" />
+    <Compile Include="Entity Related\EntityManager.cs" />
+    <Compile Include="Entity Related\FieldPlayer.cs" />
+    <Compile Include="Entity Related\GoalKeeper.cs" />
+    <Compile Include="Entity Related\MovingEntity.cs" />
+    <Compile Include="Entity Related\PlayerBase.cs" />
+    <Compile Include="Entity Related\SoccerBall.cs" />
+    <Compile Include="Game Files\GameMessages.cs" />
+    <Compile Include="Game Files\Region.cs" />
+    <Compile Include="Game Files\SoccerGoal.cs" />
+    <Compile Include="Game Files\SoccerPitch.cs" />
+    <Compile Include="Game Files\SoccerTeam.cs" />
+    <Compile Include="Game Files\State.cs" />
+    <Compile Include="Game Files\StateMachine.cs" />
+    <Compile Include="Game Files\SteeringBehaviors.cs" />
+    <Compile Include="Game Files\SupportSpotCalculator.cs" />
+    <Compile Include="Messaging\MessageDispatcher.cs" />
+    <Compile Include="Messaging\Telegram.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleSoccer.resx">
+      <DependentUpon>SimpleSoccer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SimpleSoccer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimpleSoccer.Designer.cs">
+      <DependentUpon>SimpleSoccer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="States\AttackingState.cs" />
+    <Compile Include="States\ChaseBallState.cs" />
+    <Compile Include="States\DefendingState.cs" />
+    <Compile Include="States\DribbleState.cs" />
+    <Compile Include="States\GlobalKeeperState.cs" />
+    <Compile Include="States\GlobalPlayerState.cs" />
+    <Compile Include="States\InterceptBallState.cs" />
+    <Compile Include="States\KickBallState.cs" />
+    <Compile Include="States\PrepareForKickoffState.cs" />
+    <Compile Include="States\PutBallBackInPlay.cs" />
+    <Compile Include="States\ReceiveBallState.cs" />
+    <Compile Include="States\ReturnHomeGoalState.cs" />
+    <Compile Include="States\ReturnToHomeRegionState.cs" />
+    <Compile Include="States\SupportAttackerState.cs" />
+    <Compile Include="States\TendGoalState.cs" />
+    <Compile Include="States\WaitState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Params.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\ball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
